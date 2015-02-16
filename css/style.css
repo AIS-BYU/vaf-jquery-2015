@@ -1,0 +1,147 @@
+* {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+body {
+  margin: 0;
+}
+header,
+main,
+footer,
+.table-flex {
+  display: flex;
+}
+main div {
+  padding: 15px;
+}
+
+.header-left,
+.header-right,
+.main-left,
+.main-right,
+.footer-left,
+.footer-right,
+.table-column {
+  flex: 1 1;
+}
+.main-center {
+  flex: 3 1;
+}
+.header-right,
+.footer-right {
+  text-align: right;
+}
+.footer-left,
+.footer-right {
+  padding: 15px 15px;
+}
+.notification {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -150px;
+  width: 300px;
+}
+.tab-bar {
+  list-style-type: none;
+  display: inline-flex;
+  margin: 0;
+}
+.tab-bar li {
+  padding: 0 15px;
+  height: 100%;
+  position: relative;
+}
+.tab-bar li a {
+  height: 100%;
+  line-height: 3;
+  text-decoration: none;
+}
+.tab-bar li ul {
+  position: absolute;
+}
+.tab-bar li:hover {
+  background-color: lightgrey;
+}
+.tab-active {
+  color: white;
+  background-color: grey;
+  border-bottom: solid 1px white;
+}
+.notification {
+  background-color: lightgrey;
+  padding: 0;
+}
+.notification * {
+  margin: 10px;
+}
+@media screen and (max-width: 680px) and (min-width: 480px) {
+  main,
+  .table-flex {
+    flex-direction: column;
+  }
+  .main-center {
+    order: 1;
+  }
+  .main-left {
+    order: 2;
+  }
+  .main-right {
+    order: 3;
+  }
+}
+@media screen and (max-width: 480px) {
+  header,
+  main,
+  footer,
+  .table-flex {
+    flex-direction: column;
+  }
+  .tab-bar {
+    display: block;
+    padding: 0;
+  }
+  .main-center {
+    order: 1;
+  }
+  .main-left {
+    order: 2;
+  }
+  .main-right {
+    order: 3;
+  }
+}
+.dropdown-menu {
+  display: none;
+  background-color: darkgrey;
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: -15px;
+  z-index: 100;
+}
+.menu-right {
+  position: fixed;
+  right: 0;
+}
+.menu-float ul {
+  list-style-type: none;
+  padding-left: 0;
+  color: #aaa;
+  width: 240px;
+}
+.menu-float ul li {
+  text-align: center;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+table{
+  width: 100%;
+  border: 1px solid black;
+}
+
+thead {
+  background-color: lightgrey;
+}
